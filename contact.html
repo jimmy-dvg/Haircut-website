@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакт — Atelier Meridian</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-shell contact-page">
+        <header class="hero-header">
+            <div class="brand-block">
+                <span class="studio-tag">Atelier Meridian</span>
+                <p class="studio-note">Свържете се с нашия консиерж и създайте ритуала си.</p>
+            </div>
+            <nav class="nav-menu" aria-label="Primary">
+                <a href="index.html#home">Студио</a>
+                <a href="services.html">Услуги</a>
+                <a href="about.html">За нас</a>
+                <a href="#contact-hub">Контакт</a>
+            </nav>
+        </header>
+
+        <main id="contact-hub">
+            <section class="contact-hero">
+                <div class="hero-copy">
+                    <p class="eyebrow">Контакт</p>
+                    <h1>Разкажете как искате да се чувствате — ние ще архитектираме пътя.</h1>
+                    <p class="lede">Свържете се по телефон, текст или имейл за резервации, колаборации или медии. Отговаряме в рамките на един работен ден.</p>
+                    <div class="hero-cta">
+                        <a class="primary" href="tel:+1234567890">Обади се в студиото</a>
+                        <a class="secondary" href="sms:+1234567890">Пиши ни SMS</a>
+                    </div>
+                </div>
+                <div class="contact-cards">
+                    <article>
+                        <h3>Телефон</h3>
+                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        <p>Жив човек от вторник до събота, 9:00–18:00.</p>
+                    </article>
+                    <article>
+                        <h3>Имейл</h3>
+                        <a href="mailto:hello@ateliermeridian.com">hello@ateliermeridian.com</a>
+                        <p>Изпратете вдъхновения или идеи за колаборация.</p>
+                    </article>
+                    <article>
+                        <h3>Студио</h3>
+                        <p>411 Soft-Tech Way<br>Стая 402<br>Сиатъл, Вашингтон</p>
+                        <p>Само с предварително записан час.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="hours-location">
+                <div class="hours-card">
+                    <p class="eyebrow">Работно време</p>
+                    <table>
+                        <tbody>
+                            <tr><th>Вторник</th><td>10:00 – 19:00</td></tr>
+                            <tr><th>Сряда</th><td>10:00 – 19:00</td></tr>
+                            <tr><th>Четвъртък</th><td>11:00 – 20:00</td></tr>
+                            <tr><th>Петък</th><td>9:00 – 18:00</td></tr>
+                            <tr><th>Събота</th><td>9:00 – 16:00</td></tr>
+                            <tr><th>Неделя–Понеделник</th><td>Креативна лаборатория / затворено</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="map-card">
+                    <p class="eyebrow">Карта</p>
+                    <h2>Soft-Tech District</h2>
+                    <p>Ще ни откриете на четвъртия етаж над Glasshouse Café. Уличен паркинг и метро са на три минути пеша.</p>
+                    <figure class="map-embed">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Птичи поглед към градските улици" loading="lazy">
+                        <figcaption>Soft-Tech District, Сиатъл</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="booking-form">
+                <header>
+                    <p class="eyebrow">Форма до консиержа</p>
+                    <h2>Оставете бележка и ще откликнем до един работен ден.</h2>
+                </header>
+                <form>
+                    <div class="form-grid">
+                        <label>
+                            <span>Пълно име</span>
+                            <input type="text" name="name" placeholder="Джеми А." required>
+                        </label>
+                        <label>
+                            <span>Имейл</span>
+                            <input type="email" name="email" placeholder="you@example.com" required>
+                        </label>
+                        <label>
+                            <span>Предпочитана дата</span>
+                            <input type="date" name="date">
+                        </label>
+                        <label>
+                            <span>Интерес към услуга</span>
+                            <select name="service">
+                                <option value="">Изберете ритуал</option>
+                                <option>Precision Cut Lab</option>
+                                <option>Chromatic Studio</option>
+                                <option>Care Rituals</option>
+                                <option>Full Meridian Reset</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label class="message-field">
+                        <span>Разкажете за целите си за косата</span>
+                        <textarea name="message" rows="5" placeholder="Текстура, настроения, история на цвета..."></textarea>
+                    </label>
+                    <button type="submit" class="primary">Изпрати запитване</button>
+                </form>
+            </section>
+
+            <section class="contact-cta-final">
+                <h2>Предпочитате жив разговор?</h2>
+                <p>Изпратете ни moodboard или гласова бележка на +1 (234) 567-890 и ще върнем идеи в реално време.</p>
+                <div class="hero-cta">
+                    <a class="secondary" href="sms:+1234567890">Отвори чат</a>
+                    <a class="primary" href="tel:+1234567890">Обади се сега</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div>
+                <span>© 2026 Atelier Meridian</span>
+                <span>Soft-Tech District · Сиатъл</span>
+            </div>
+            <div class="footer-nav">
+                <a href="index.html#home">Студио</a>
+                <a href="services.html">Услуги</a>
+                <a href="about.html">За нас</a>
+                <a href="#contact-hub">Контакт</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

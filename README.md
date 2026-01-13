@@ -1,25 +1,33 @@
-# Atelier Meridian — Haircut Studio
+# Atelier Meridian — Студио за подстригване
 
-This experience now includes the hero-led home page and a detailed services index, both wrapped in a luminous soft-tech visual style.
+Сайтът вече включва водеща начална страница, подробен индекс на услугите, страница „За нас“ с историята на ателието и консиерж контакт център – всичко представено в soft-tech естетика.
 
-## Site Structure
-- **Header**: Studio wordmark tag, supporting note, and primary navigation links to Craft, Artists, and Book sections.
-- **Main Content**:
-  - Hero: Headline, positioning copy, dual call-to-actions, and a stat panel.
-  - Services: Three-card grid that outlines the craft menu with pricing.
-  - Artists: Profiles that spotlight the lead cutters.
-  - Booking: Contact-forward card for calls and email inquiries.
-- **Footer**: Studio credit line, location note, and quick anchor links back to key sections.
-- **Services Page (`services.html`)**:
-  - Narrative hero explaining the service philosophy with quick metrics.
-  - Core Pillars section detailing Precision Cut Lab, Chromatic Studio, and Care Rituals.
-  - Tiered journeys, enhancement add-ons, and an expectation-focused FAQ.
-  - Dedicated CTA banner to route guests back to booking channels.
+## Структура на сайта
+- **Хедър**: Лого, описателна мисия и основна навигация към секции Меню, Артисти, Услуги, За нас, Контакт и Запази час.
+- **Главно съдържание**:
+  - Герой: Заглавие, позициониращ текст, два призива за действие и панел със статистики.
+  - Меню: Решетка с три услуги и цени.
+  - Артисти: Карти с профили на водещите стилисти.
+  - Резервации: Карта с контакти за телефон и имейл.
+- **Футър**: Кредит, локация и бързи връзки към ключовите секции.
+- **Страница Услуги (`services.html`)**:
+  - Наративен герой с философията на ритуалите и ключови метрики.
+  - „Основни стълбове“ за Precision Cut Lab, Chromatic Studio и Care Rituals.
+  - Нива на пътуванията, надграждания и ЧЗВ с очакванията за визитата.
+  - Финален CTA за връзка с консиержа.
+- **Страница За нас (`about.html`)**:
+  - Герой, който разказва за етоса, основаването и обещанията.
+  - История на студиото, четиристъпкова времева линия и ценности.
+  - Акценти върху екипа и CTA към услуги или контакт.
+- **Страница Контакт (`contact.html`)**:
+  - Контактен герой с карти за телефон, имейл и адрес.
+  - Таблица с работно време, карта на квартала и форма за запитвания.
+  - Заключителен призив за жив чат по SMS или телефон.
 
-## Tech Notes
-- Hand-authored HTML5 with semantic sections and aria labeling for navigation.
-- Custom CSS leveraging Playfair Display and Space Grotesk from Google Fonts.
-- Responsive grid layouts adapt down to small screens without layout collapse.
+## Технически бележки
+- Ръчно написан HTML5 със семантични секции и aria атрибути за навигация.
+- Custom CSS, използващ Playfair Display и Space Grotesk от Google Fonts.
+- Отзивчиви grid оформления, които се адаптират към малки екрани.
 
-## Local Preview
-Open `index.html` for the studio overview and `services.html` for the extended menu in any modern browser (Chrome, Edge, Firefox, Safari). No build tools or dependencies are required.
+## Локален преглед
+Отворете `index.html` за преглед на студиото, `services.html` за разширеното меню, `about.html` за историята и `contact.html` за контактите във всеки модерен браузър (Chrome, Edge, Firefox, Safari). Не са нужни сборни инструменти или зависимости.
