@@ -1,0 +1,313 @@
+:root {
+    --ink: #0e1116;
+    --charcoal: #1d232b;
+    --sand: #f3efe8;
+    --gold: #f5c06b;
+    --blush: #ffdad2;
+    --glow: #8cd7c4;
+    --accent: #a37bff;
+    --text: #d9dadc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top right, rgba(163, 123, 255, 0.25), transparent 40%),
+                radial-gradient(circle at 20% 20%, rgba(140, 215, 196, 0.3), transparent 45%),
+                linear-gradient(145deg, #0a0d12, #141a20 60%, #0f1319);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.page-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem clamp(1rem, 4vw, 3rem) 3.5rem;
+}
+
+.hero-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand-block {
+    max-width: 420px;
+}
+
+.studio-tag {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.studio-note {
+    margin-top: 0.25rem;
+    color: rgba(217, 218, 220, 0.85);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 0.15rem;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--gold);
+}
+
+.nav-menu a:hover::after {
+    transform: scaleX(1);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+    margin-top: 3rem;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2.5rem;
+    border-radius: 24px;
+    background: rgba(8, 10, 15, 0.65);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: -40% auto auto 40%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(245, 192, 107, 0.6), transparent 60%);
+    animation: floatGlow 8s ease-in-out infinite;
+}
+
+@keyframes floatGlow {
+    0%, 100% { transform: translateY(0); opacity: 0.9; }
+    50% { transform: translateY(-20px); opacity: 0.5; }
+}
+
+.hero-content h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.6rem, 5vw, 3.8rem);
+    line-height: 1.1;
+    margin: 0.75rem 0 1rem;
+}
+
+.hero-content .lede {
+    color: rgba(217, 218, 220, 0.85);
+    max-width: 460px;
+}
+
+.eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+
+.hero-cta {
+    margin-top: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hero-cta a,
+.contact-options a {
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 0.85rem 1.5rem;
+    border-radius: 999px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.primary {
+    background: var(--gold);
+    color: #1a1206;
+    box-shadow: 0 10px 25px rgba(245, 192, 107, 0.35);
+}
+
+.secondary {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: var(--text);
+}
+
+.hero-cta a:hover,
+.contact-options a:hover {
+    transform: translateY(-2px);
+}
+
+.hero-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    align-self: center;
+}
+
+.stat {
+    background: rgba(20, 20, 25, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.services, .artists, .booking {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.services header h2,
+.artists header h2,
+.booking h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.service-grid,
+.artist-profiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-grid article,
+.artist-profiles article {
+    background: rgba(10, 14, 20, 0.65);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.service-grid article:hover,
+.artist-profiles article:hover {
+    transform: translateY(-6px);
+    border-color: rgba(245, 192, 107, 0.4);
+}
+
+.price {
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    color: var(--gold);
+    margin-top: auto;
+}
+
+.booking {
+    align-items: center;
+}
+
+.booking-card {
+    width: min(100%, 640px);
+    background: linear-gradient(135deg, rgba(255, 218, 210, 0.08), rgba(140, 215, 196, 0.12));
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+.contact-options {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.site-footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-nav a {
+    color: rgba(217, 218, 220, 0.8);
+    text-decoration: none;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 640px) {
+    .hero-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .hero,
+    .booking-card {
+        padding: 1.75rem;
+    }
+}
