@@ -1,0 +1,50 @@
+[build]
+  # This is a static site with no build process
+  publish = "."
+  command = "echo 'No build command needed for static site'"
+
+[[redirects]]
+  # Single Page Application style redirects for clean URLs
+  from = "/services"
+  to = "/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[headers]]
+  # Cache CSS files
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  # Cache JavaScript files
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  # Cache image files
+  for = "/*.(jpg|jpeg|png|gif|webp|svg|ico)"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  # Cache font files
+  for = "/*.(woff|woff2|ttf|eot)"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  # Cache HTML with revalidation
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
